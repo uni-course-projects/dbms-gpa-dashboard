@@ -1,6 +1,6 @@
 # 📊 University DBMS GPA Dashboard  
 
-A full-stack coursework project that computes and visualizes **batch-wise semester GPA** from a normalized university database.  
+A full-stack university coursework project that computes and visualizes **batch-wise semester GPA** from a normalized university database.  
 
 The system integrates a PostgreSQL database with a Node.js + Express backend and a lightweight frontend built using HTML/CSS and Alpine.js.  
 
