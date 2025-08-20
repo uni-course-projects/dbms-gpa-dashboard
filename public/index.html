@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Batch GPA Dashboard</title>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.14.1/dist/cdn.min.js"></script>
+    <style>
+      a.selector {
+        margin-right: 10px;
+        cursor: pointer;
+        color: blue;
+        text-decoration: underline;
+      }
+      a.selector:hover {
+        color: darkblue;
+      }
+      button {
+        margin-bottom: 15px;
+        padding: 5px 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div x-data="App()">
+      <h1>Batch Wise Semester GPA Viewer</h1>
+
+      <!-- LOAD ALL DATA BUTTON -->
+      <button @click="loadAllData">Load All Data</button>
+
+      <!-- YEAR SELECTION -->
+      <div>
+        <h2>Select Year:</h2>
+        <template x-for="year in allYears" :key="year">
+          <a class="selector" @click.prevent="selectYear(year)" x-text="year"></a>
+        </template>
+      </div>
+
+      <!-- SEMESTER SELECTION -->
+      <template x-if="selectedBatchYear">
+        <div style="margin-top: 10px;">
+          <h2>Select Semester for <span x-text="selectedBatchYear"></span>:</h2>
+          <a class="selector" @click.prevent="selectSemester('Fall')">Fall</a>
+          <a class="selector" @click.prevent="selectSemester('Spring')">Spring</a>
+          <a class="selector" @click.prevent="selectSemester('Summer')">Summer</a>
+        </div>
+      </template>
+
+      <!-- LOADING / ERROR MESSAGES -->
+      <div x-show="loading"><p>Loading data...</p></div>
+      <div x-show="error" x-text="error" style="color: red;"></div>
+
+      <!-- GPA TABLE -->
+      <table border="1" x-show="batchGpaData.length > 0" style="margin-top: 15px;">
+        <thead>
+          <tr>
+            <th>Class</th>
+            <th>Semester</th>
+            <th>Average GPA</th>
+            <th>Total Students</th>
+          </tr>
+        </thead>
+        <tbody>
+          <template x-for="item in batchGpaData" :key="`${item.batch_year}-${item.semester}`">
+            <tr>
+              <td x-text="item.batch_year"></td>
+              <td x-text="item.semester"></td>
+              <td x-text="item.batch_avg_gpa"></td>
+              <td x-text="item.student_count || 0"></td>
+            </tr>
+          </template>
+        </tbody>
+      </table>
+
+      <p x-show="!loading && !error && batchGpaData.length === 0">
+        No data found for the selected batch and semester.
+      </p>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
