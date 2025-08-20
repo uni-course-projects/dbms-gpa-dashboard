@@ -111,17 +111,18 @@ node main.js
 
 ## 📸 Screenshots  
 
-- **Dashboard UI** – Year/Semester filter view  
-![Dashboard UI](screenshots/dashboard.png)
+### Dashboard UI – Year/Semester Filter View  
+![Dashboard UI](screenshots/dashboard.png)  
 
-- **Load All Data**
-![Load All Data](screenshots/load-all-data.png)
+### Load All Data  
+![Load All Data](screenshots/load-all-data.png)  
 
-- **Specific Year and Semester**
-![Specific Year and Semester](screenshots/specific-year-semester.png)
+### Specific Year and Semester  
+![Specific Year and Semester](screenshots/specific-year-semester.png)  
 
-- **Sample JSON Output** – from `/batch-gpa`
+### Sample JSON Output – from `/batch-gpa`  
 ![Sample JSON Output](screenshots/json.png)  
+
 
 ---
 
