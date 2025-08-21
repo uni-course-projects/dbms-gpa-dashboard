@@ -147,4 +147,4 @@ node main.js
 ---
 
 ## 🏁 Conclusion  
-This project showcases how database concepts can be applied in practice — from schema design and query formulation to API integration and frontend visualization. It demonstrates not only SQL logic but also how to package a complete working system for academic and portfolio purposes.  
+This project showcases how database concepts can be applied in practice, from schema design and query formulation to API integration and frontend visualization. It demonstrates not only SQL logic but also how to package a complete working system for academic and portfolio purposes.  
