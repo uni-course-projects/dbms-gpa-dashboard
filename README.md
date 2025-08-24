@@ -7,7 +7,9 @@ The system integrates a PostgreSQL database with a Node.js + Express backend and
 ---
 
 ## 👨‍💻 Created By  
-- **Umer**  
+- **Umer**
+- **Shamikh**
+- **Mashood**
 
 **Course:** *Database Management Systems (DBMS)*  
 
