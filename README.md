@@ -105,7 +105,7 @@ You only need to run this command if you cloned the repo and want to build your 
 ```bash
 docker run --env-file .env -p 3000:3000 umerexe/dbms-gpa-dashboard:latest
 ```
-
+Dockerhub repo: https://hub.docker.com/r/umerexe/dbms-gpa-dashboard
 ---
 
 ## 📡 Sample API Response  
