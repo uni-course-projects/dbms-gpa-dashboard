@@ -88,6 +88,25 @@ node main.js
 
 ---
 
+## 🐳 Run with Docker (Connects to Neon Postgres)
+
+This app is Docker-ready, no local database setup needed. It connects directly to your **Neon** Postgres instance in the cloud.
+
+### 1️⃣ Create a `.env` file
+Use `.env.example` as a reference and fill in your Neon credentials.
+
+### 2️⃣ Build the Docker image in the folder with .env file
+```bash
+docker build -t dbms-gpa-dashboard:local .
+```
+
+### 3️⃣ Run the container
+```bash
+docker run --env-file .env -p 3000:3000 umerexe/dbms-gpa-dashboard:latest
+```
+
+---
+
 ## 📡 Sample API Response  
 
 `GET /batch-gpa?year=1952&semester=Fall`  
@@ -150,3 +169,5 @@ node main.js
 
 ## 🏁 Conclusion  
 This project showcases how database concepts can be applied in practice, from schema design and query formulation to API integration and frontend visualization. It demonstrates not only SQL logic but also how to package a complete working system for academic and portfolio purposes.  
+
+
