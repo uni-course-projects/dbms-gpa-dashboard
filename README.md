@@ -92,16 +92,16 @@ node main.js
 
 This app is Docker-ready, no local database setup needed. It connects directly to your **Neon** Postgres instance in the cloud.
 
-### 1️⃣ Create a `.env` file
+### Create a `.env` file in the same dir before running the container
 Use `.env.example` as a reference and fill in your Neon credentials.
 
-### 2️⃣ Build the Docker image in the folder with .env file
+### Build the Docker image in the folder with .env file
 ```bash
 docker build -t dbms-gpa-dashboard:local .
 ```
 You only need to run this command if you cloned the repo and want to build your own image.
 
-### 3️⃣ Run the container
+### Run the container
 ```bash
 docker run --env-file .env -p 3000:3000 umerexe/dbms-gpa-dashboard:latest
 ```
