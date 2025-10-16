@@ -99,6 +99,7 @@ Use `.env.example` as a reference and fill in your Neon credentials.
 ```bash
 docker build -t dbms-gpa-dashboard:local .
 ```
+You only need to run this command if you cloned the repo and want to build your own image.
 
 ### 3️⃣ Run the container
 ```bash
